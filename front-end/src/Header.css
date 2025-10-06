@@ -6,36 +6,48 @@
 
 .Header-header {
   background-color: #282c34;
-  min-height: 20vh;
+  min-height: 15vh; /* made header a bit smaller */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 1vmin);
   color: white;
+  padding: 10px 20px;
 }
 
 .logo {
   display: inline-block;
 }
 
+.logo img {
+  width: 150px;
+  vertical-align: middle;
+  transition: transform 0.2s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
 .nav-links {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
 .nav-item {
   display: inline-block;
   padding: 10px 15px;
 }
+
 .nav-item a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
 }
 
 .nav-item:hover a {
-  color: gray;
-}
-
-.logo img {
-  width: 175px;
-  vertical-align: middle;
+  color: #61dafb; /* React blue on hover */
 }
