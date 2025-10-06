@@ -1,0 +1,31 @@
+.AboutUs-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.AboutUs-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #282c34;
+}
+
+.AboutUs-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.AboutUs-imageWrapper {
+  margin-top: 20px;
+}
+
+.AboutUs-image {
+  max-width: 300px;
+  width: 100%;          
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
