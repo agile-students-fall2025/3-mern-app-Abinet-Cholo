@@ -40,6 +40,7 @@ app.get('/messages', async (req, res) => {
   }
 })
 
+app.use(express.static("public"))
 // a route to handle fetching a single message by its id
 app.get('/messages/:messageId', async (req, res) => {
   // load all messages from database
@@ -76,6 +77,19 @@ app.post('/messages/save', async (req, res) => {
       status: 'failed to save the message to the database',
     })
   }
+})
+
+// About Us route inline
+app.get("/api/about", (req, res) => {
+  res.json({
+    title: "About Me",
+    text: [
+      "Hi, my name is Abinet Bushura. I’m a Computer Science student at NYU with interests in AI and software engineering.",
+      "I enjoy building web applications, experimenting with AI models, and working on backend systems.",
+      "In my free time, I love playing football and exploring new tech ideas."
+    ],
+    image: "http://localhost:5002/about.jpg"
+  })
 })
 
 // export the express app we created to make it available to other modules
